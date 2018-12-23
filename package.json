@@ -1,6 +1,6 @@
 {
   "name": "jest-element-snapshots",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Test against snapshots of DOM elements",
   "main": "index.js",
   "devDependencies": {
