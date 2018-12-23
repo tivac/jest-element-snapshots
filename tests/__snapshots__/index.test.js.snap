@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`.toMatchDOMSnapshot() should accept a string 1`] = `
+
+<div class="one">
+  ONE
+</div>
+
+`;
+
+exports[`.toMatchDOMSnapshot() should accept an ElementHandler 1`] = `
+
+<div class="one">
+  ONE
+</div>
+
+`;
+
+exports[`.toMatchDOMSnapshot() should support named snapshots: named 1`] = `
+
+<div class="one">
+  ONE
+</div>
+
+`;
