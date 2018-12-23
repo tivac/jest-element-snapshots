@@ -6,12 +6,13 @@ Make capturing & comparing snapshots of the `puppeteer` DOM easier!
 ## Installing
 
 1. `npm install jest-element-snapshots --save-dev`
-2. Add a [`setupTestFrameworkScriptFile`](https://jestjs.io/docs/en/configuration#setuptestframeworkscriptfile-string) value to your jest config & create a JS file for it to point to
-3. The file you created should contain the following snippet to install the matcher onto jest's global `expect`.
+2. Add this snippet somewhere in your tests (a [`setupTestFrameworkScriptFile`](https://jestjs.io/docs/en/configuration#setuptestframeworkscriptfile-string) is a good place)
 
 ```js
 require("jest-element-snapshots")();
 ```
+
+This will install the `.toMatchDOMSnapshot()` functionality onto `.expect()`. See the [Installation API](#installation-api) section for available options.
 
 ## Usage
 
