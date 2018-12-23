@@ -20,10 +20,11 @@ This will install the `.toMatchDOMSnapshot()` functionality onto `.expect()`. Se
 it("should generate some consistent output", async () => {
     await page.goto("http://example.com");
 
-    // Will look up the element in puppeteer, grab its .outerHTML value,
+    // Will look up the element in puppeteer,
+    // grab its .outerHTML value,
     // and compare it against any previous snapshot value
     //
-    // Note that this is an **async** matcher and must be awaited!
+    // This is an **async** matcher so use await!
     await expect("body").toMatchDOMSnapshot();
 });
 ```
