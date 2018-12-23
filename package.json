@@ -1,0 +1,30 @@
+{
+  "name": "jest-element-snapshots",
+  "version": "1.0.0",
+  "description": "Test against snapshots of DOM elements",
+  "main": "index.js",
+  "devDependencies": {
+    "@tivac/eslint-config": "^2.2.2",
+    "eslint": "^5.11.0",
+    "eslint-plugin-jest": "^22.1.2",
+    "jest": "^23.6.0",
+    "jest-puppeteer": "^3.7.0",
+    "jest-serializer-html": "^5.0.0",
+    "puppeteer": "^1.11.0"
+  },
+  "peerDependencies": {
+    "jest-snapshot": "~23.6.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "keywords": [
+    "jest",
+    "snapshot",
+    "puppeteer",
+    "jest-puppeteer"
+  ],
+  "author": "Pat Cavit <npm@patcavit.com>",
+  "license": "MIT"
+}
