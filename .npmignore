@@ -1,4 +1,4 @@
 jest.config.js
-setup.js
 tests/
 .*
+coverage
