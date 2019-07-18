@@ -33,12 +33,38 @@ it("should generate some consistent output", async () => {
 
 ### Installation API
 
-`jest-element-snapshots` exports a default function that will take one optional arg, a reference to the `puppeteer` [`page`](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-page) object. If you're using [`jest-puppeteer`](https://github.com/smooth-code/jest-puppeteer) the default will work fine.
+`jest-element-snapshots` exports a function that will take one optional arg, an object of configuration params.
+
+All params are **optional**.
+
+#### Params
+
+##### `page`
+
+A reference to the `puppeteer` [`page`](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-page) object. If you're using [`jest-puppeteer`](https://github.com/smooth-code/jest-puppeteer) the default will work fine.
+
+##### `waitFor`
+
+If truthy will make the matcher wait for the selector to exist in the DOM before attempting to read the element from the DOM. If falsey the matcher will attempt to read the element from the DOM immediately.
 
 ### Usage API
 
-`expect(<string|ElementHandle>).toMatchDOMSnapshot(<string>)`
+`expect(<string|ElementHandle> element).toMatchDOMSnapshot(<string> hint, <object> options)`
 
-The first argument to `expect()` should be either a string CSS selector, or a puppeteer [`ElementHandle`](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-elementhandle).
+#### Arguments
 
-The first argument passed to `.toMatchDOMSnapshot()` should be a string for using jest's named snapshot support. Snapshot Property Matchers are **not supported**, mostly because we're dealing solely with strings here and that wouldn't make any sense.
+##### `element`
+
+Either a string CSS selector, or a puppeteer [`ElementHandle`](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-elementhandle). Will be used to locate the element in the DOM to snapshot.
+
+##### `hint`
+
+A string that is passed to the underlying jest `.toMatchSnapshot()` code as the [`hint`](https://jestjs.io/docs/en/expect#tomatchsnapshotpropertymatchers-hint) parameter to give snapshots an extra name, useful for differentiating multiple snapshots in a single test.
+
+##### `options`
+
+Snapshot-specific options, will override any [options](#params) set globally.
+
+###### `waitFor`
+
+If truthy will make the matcher wait for the selector to exist in the DOM before attempting to read the element from the DOM. If falsey the matcher will attempt to read the element from the DOM immediately.
