@@ -1,6 +1,10 @@
 "use strict";
 
 describe(".toMatchDOMSnapshot()", () => {
+    beforeAll(() => {
+        require("../index.js")();
+    });
+
     beforeEach(async () => {
         await page.goto(require.resolve("./fixtures/one.html"));
     });
