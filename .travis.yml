@@ -1,3 +1,7 @@
+# Required for puppeteer to work
+dist: trusty
+sudo: required
+
 language: node_js
 node_js:
 - node
