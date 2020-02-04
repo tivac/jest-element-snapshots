@@ -4,7 +4,7 @@ const { toMatchSnapshot } = require("jest-snapshot");
 
 module.exports = ({ page = global.page, waitFor = false } = false) => {
     expect.extend({
-        async toMatchDOMSnapshot(selector, name, opts = {}) {
+        async toMatchDOMSnapshot(selector, name = "", opts = {}) {
             let el = selector;
 
             // Support both string selectors and ElementHandles
