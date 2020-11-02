@@ -11,8 +11,8 @@ addons:
 language: node_js
 node_js:
 - node
+- '12'
 - '10'
-- '8'
 
 # https://docs.travis-ci.com/user/customizing-the-build/#Fast-Finishing
 matrix:
