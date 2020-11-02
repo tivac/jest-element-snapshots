@@ -19,8 +19,8 @@ module.exports = {
     ],
 
     globals : {
-        page    : true,
-        browser : true,
+        page     : true,
+        browser  : true,
         document : true,
     },
 
