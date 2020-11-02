@@ -12,7 +12,7 @@ exports[`.toMatchDOMSnapshot() should accept an ElementHandle 1`] = `
 </div>
 `;
 
-exports[`.toMatchDOMSnapshot() should give useful errors when a selector isn't found 1`] = `"Error: Unable to locate element matching: .two"`;
+exports[`.toMatchDOMSnapshot() should give useful errors when a selector isn't found 1`] = `"Unable to locate element matching selector \\".two\\""`;
 
 exports[`.toMatchDOMSnapshot() should support named snapshots: named 1`] = `
 <div class="one">

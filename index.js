@@ -18,7 +18,10 @@ module.exports = ({ page = global.page, waitFor = false } = false) => {
                 el = await page.$(selector);
 
                 if(!el) {
-                    throw new Error(`Unable to locate element matching: ${selector}`);
+                    return {
+                        message : () => `Unable to locate element matching selector "${selector}"`,
+                        pass    : false,
+                    };
                 }
             }
 

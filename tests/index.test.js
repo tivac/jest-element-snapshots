@@ -24,10 +24,6 @@ describe(".toMatchDOMSnapshot()", () => {
     });
 
     it("should give useful errors when a selector isn't found", async () => {
-        try {
-            await expect(".two").toMatchDOMSnapshot();
-        } catch(e) {
-            expect(e.toString()).toMatchSnapshot();
-        }
+        await expect(expect(".two").toMatchDOMSnapshot()).rejects.toThrowErrorMatchingSnapshot();
     });
 });
