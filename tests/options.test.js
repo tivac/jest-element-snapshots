@@ -2,15 +2,17 @@
 
 const matcher = require("../index.js");
 
+const load = require("./load.js");
+
 describe(".toMatchDOMSnapshot() options", () => {
     beforeEach(async () => {
-        await page.goto(require.resolve("./fixtures/one.html"));
+        await page.goto(load(require.resolve("./fixtures/one.html")));
     });
 
     it("should accept a different page instance", async () => {
         const two = await browser.newPage();
 
-        await two.goto(require.resolve("./fixtures/two.html"));
+        await two.goto(load(require.resolve("./fixtures/two.html")));
         
         matcher({ page : two });
 
