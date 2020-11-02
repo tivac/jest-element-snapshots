@@ -34,6 +34,6 @@ describe(".toMatchDOMSnapshot() options", () => {
 
         const matching = expect(".new").toMatchDOMSnapshot("snap", { waitFor : false });
 
-        await expect(matching).rejects.toThrow("Unable to locate element matching: .new");
+        await expect(matching).rejects.toThrowErrorMatchingSnapshot();
     });
 });

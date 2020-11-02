@@ -6,6 +6,8 @@ exports[`.toMatchDOMSnapshot() options should accept a different page instance 1
 </div>
 `;
 
+exports[`.toMatchDOMSnapshot() options should allow overriding the global waitFor setting 1`] = `"Unable to locate element matching selector \\".new\\""`;
+
 exports[`.toMatchDOMSnapshot() options should wait for an element to exist when waitFor is true 1`] = `
 <div class="new">
   NEW
