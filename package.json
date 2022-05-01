@@ -6,7 +6,7 @@
   "devDependencies": {
     "@tivac/eslint-config": "^2.4.0",
     "eslint": "^7.12.1",
-    "eslint-plugin-jest": "^24.1.0",
+    "eslint-plugin-jest": "^26.1.5",
     "jest": "^27.0.6",
     "jest-puppeteer": "^5.0.3",
     "jest-serializer-html": "^7.0.0",
