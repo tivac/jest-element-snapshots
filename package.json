@@ -10,7 +10,7 @@
     "jest": "^28.1.0",
     "jest-puppeteer": "^6.1.0",
     "jest-serializer-html": "^7.0.0",
-    "puppeteer": "^9.1.1"
+    "puppeteer": "^15.2.0"
   },
   "peerDependencies": {
     "jest-snapshot": "~25.1.0"
